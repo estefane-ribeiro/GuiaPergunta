@@ -1,0 +1,43 @@
+<%- include('partials/header.ejs') %>
+<body>
+  <!-- novo modo de usar: < % - include('partials/header.ejs') % > -->
+  <%- include('partials/navbar.ejs') %>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3>Realize sua pergunta</h3>
+      </div>
+
+      <div class="card-body">
+        <form action="/salvarPergunta" method="POST">
+          <label for="titulo">Titulo</label>
+          <input
+            type="text"
+            placeholder="Título da pergunta."
+            class="form-control"
+            id="titulo"
+            name="titulo"
+          />
+          <br />
+          <label for="descricao">Descrição</label>
+          <textarea
+            placeholder="Descreva aqui sua pergunta."
+            class="form-control"
+            id="descricao"
+            name="descricao"
+          ></textarea>
+          <!-- btn-success é uma classe que estiliza basicamente a cor do botão 
+            btn-success é na cor verde
+            btn-primary é na cor azul 
+            btn-dang é na cor vermelha
+            btn-warning = amarela 
+          -->
+          <br />
+          <button class="btn btn-success">Perguntar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+<%- include('partials/footer.ejs') %>
